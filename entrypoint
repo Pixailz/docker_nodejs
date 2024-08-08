@@ -32,7 +32,7 @@ if [ "${DOCKER_DEBUG}" != "" ]; then
 fi
 
 # Initialize the service only if not already initialized
-if [ ! -f "${PWD}/node_modules" ]; then
+if [ ! -d "${PWD}/node_modules" ]; then
 	npm update
 	npm upgrade
 	npm install --global "${NJCLITOOL}"
